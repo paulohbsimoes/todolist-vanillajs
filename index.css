@@ -51,6 +51,7 @@ body {
   padding: 16px;
   border: none;
   border-radius: 8px;
+  outline: none;
 }
 
 .todo .todo-form input::placeholder {
