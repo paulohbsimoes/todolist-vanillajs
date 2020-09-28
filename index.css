@@ -1,0 +1,125 @@
+:root {
+  --task-spacing: 15px;
+  --todo-primary-color: #31313b;
+  --todo-form-height: 180px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+.todo * {
+  width: 100%;
+  position: relative;
+}
+
+.todo .todo-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--todo-form-height);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: var(--todo-primary-color);
+}
+
+.todo .todo-form h2 {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todo .todo-form input {
+  font-size: 1.4rem;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.todo .todo-form input::placeholder {
+  font-size: 1rem;
+  font-style: italic;
+  color: gray;
+}
+
+.todo .todo-form button {
+  max-width: 100px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.4rem;
+  color: white;
+  background-color: rgb(149, 145, 147);
+}
+
+.todo .todo-form button:hover {
+  background-color: rgb(39, 33, 61);
+  cursor: pointer;
+}
+
+
+.todo .todo-list {
+  margin-top: var(--todo-form-height);
+  padding: 20px;
+  max-height: calc(100vh - var(--todo-form-height));
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.todo .todo-list:empty {
+  padding: 0;
+}
+
+.todo .todo-task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: var(--task-spacing);
+  padding-bottom: var(--task-spacing);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.todo .todo-task:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.todo .todo-task span {
+  padding: 10px;
+  font-size: 1.4rem;
+  color: black;
+}
+
+.todo .todo-task button {
+  border: none;
+  color: tomato;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 1.6em;
+  max-width: 40px;
+  transition: transform 0.1s;
+}
+
+.todo .todo-task button:hover {
+  color: red;
+  transform: scale(1.5);
+}
