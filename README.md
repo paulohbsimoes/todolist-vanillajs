@@ -1,7 +1,7 @@
 # Todo list - Vanilla JS
 Todo list made with Vanilla JavaScript
 
-## Preview - [GitHub Pages](https://paulohbsimoes.github.io/vanilla_todo_list/)
+## Preview - [GitHub Pages](https://paulohbsimoes.github.io/todolist-vanillajs/)
 ![To-do list preview](./assets/preview.jpg)
 
 ## References
